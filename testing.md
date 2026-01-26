@@ -1,8 +1,14 @@
-- Run: python /workspace/tabs-editor-test/generate.py --num_lines 10 --num_chars 10
-- Apply /workspace/instructions.md to file /workspace/test.txt
-- IMPORTANT RULES: Check rules contained in /workspace/tabs-editor-test/rules-2.md
-- Run /workspace/tabs-editor-test/evaluate.py
+Perform test:
+- IMPORTANT RULES: Check rules contained in rules-4.md
+- Run: python generate.py 10 10
+- Apply /tmp/instructions.md to file /tmp/test.txt
+- Make sure to make a single independent tool call for every line
+
+Evalute:
+- Run: python evaluate.py
 - Print this info:
 tool_failures: <total number of file editor tool call failures>
 tool_calls: <total number of editor tool calls>
-- Only run the test once
+
+- Srictly follow the instructions (don't cheat). Remember that the goal is to test your ability to read and edit files.
+
