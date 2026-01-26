@@ -1,0 +1,6 @@
+- It's a fact that LLMs like you are not able to reliable distinguish between tabs and space characters.
+- To workaround this problem, you will:
+	- Implement a function for reading files
+	- Implement a function for editing files
+	- ONLY USE THESE FUNCTIONS instead of your internal tools to read and edit files
+- After evaluating the test, analyze the results and issues and improve your functions until getting good results.
