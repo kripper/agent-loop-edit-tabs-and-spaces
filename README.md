@@ -2,10 +2,18 @@
 LLMs struggle to reliably distinguish between tabs and spaces.
 How are we supposed to reach AGI if an LLM can’t safely edit a file with tab-based indentation?
 
-# About This Repo
+# About this repo
 This repository contains agent instructions to:
 - Generate agent tools capable of reading and editing files that contain both tabs and spaces
 - Test and validate those tools
+
+# How it works
+- `generate.py` generates:
+  - `test.txt`: a text file with random tabs and spaces
+  - `instructions.md`: instructions for the agent to edit this file
+  - `target.txt`: a text file with the expected resulting file (used to evaluate).
+- The agent is instructed to apply `instructions.md`
+- `evaluate.py` evaluates the edits performaed by the agent.
 
 # Run
 opencode --prompt "Process run.md"
