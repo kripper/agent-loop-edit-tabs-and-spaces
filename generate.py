@@ -38,15 +38,11 @@ def main():
         for line in test_lines:
             f.write(line + "\n")
 
-    # Create instructions.md and target.txt
-    with open("/tmp/instructions.md", "w") as f:
-        target_lines = []
-        for i, old_str in enumerate(test_lines, 1):
-            new_str = get_random_line(i, num_chars)
-            old_str_escaped = escape(old_str)
-            new_str_escaped = escape(new_str)
-            f.write(f'Replace string "{old_str_escaped}" with "{new_str_escaped}"\n')
-            target_lines.append(new_str)
+    # Create target.txt only
+    target_lines = []
+    for i, old_str in enumerate(test_lines, 1):
+        new_str = get_random_line(i, num_chars)
+        target_lines.append(new_str)
 
     # Create target.txt
     with open("/tmp/target.txt", "w") as f:
