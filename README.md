@@ -9,3 +9,17 @@ This repository contains agent instructions to:
 
 # Run
 opencode --prompt "Process run.md"
+
+# Motivation
+
+* It is a very simple yet still unsolved problem.
+* Reliable file editing by agents is critically important.
+* Test results can be evaluated objectively using `evaluate.py`.
+* It is a good example for testing agent loops.
+* The agent creates and tests its own tools.
+
+# Documentation
+
+* **run.md**: Contains instructions for running the test within an agent loop.
+* **testing.md**: Describes how to perform the test. It references **rules-4.md**, which defines the rules for generating file-editing functions.
+* **coder.md**: Contains the instructions used to generate `generate.py` and `evaluate.py`. This file can be ignored, as the scripts have already been generated and tested.
